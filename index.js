@@ -207,7 +207,7 @@ const artists = [
 
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
-console.log(artists[0]);
+console.log(artists[0].name);
 console.log(artists[2].bio);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
@@ -259,7 +259,7 @@ function get20s(array){
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
 function removeArtist(array, index) {
-    array.splice(0, 1);
+    array.splice(index, 1);
     console.log(array.length);
   }
 
@@ -299,7 +299,7 @@ function lotsOfArt(array){
     for(let i = 0; i < array.length; i++) {
       //console.log(array[i].name)
       
-       if(array[i].name) {
+       if(array[i].paintings > 100) {
       //console.log(array[i]);
       artistsArray.push(array[i].name);
       console.log(artistsArray);
@@ -308,6 +308,8 @@ function lotsOfArt(array){
 }
   
   lotsOfArt(artists);
+
+
 
 
 
